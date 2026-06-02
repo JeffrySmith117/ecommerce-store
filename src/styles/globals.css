@@ -1,0 +1,14 @@
+/* Importa as classes do Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonte padrão da aplicação */
+body {
+  font-family: 'Sora', sans-serif;
+}
+
+/* Scroll suave em toda a página */
+html {
+  scroll-behavior: smooth;
+}
