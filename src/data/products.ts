@@ -1,0 +1,75 @@
+import { Product } from '../types'
+
+// Dados mockados dos produtos (simulando uma API)
+export const products: Product[] = [
+  {
+    id: 1,
+    name: 'Tênis Urban Runner Pro',
+    price: 299.90,
+    originalPrice: 399.90,
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80',
+    category: 'Calçados',
+    rating: 4.8,
+    reviewCount: 234,
+    description: 'Conforto extremo para o dia a dia urbano.',
+    badge: 'Oferta',
+  },
+  {
+    id: 2,
+    name: 'Mochila Explorer 30L',
+    price: 189.90,
+    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80',
+    category: 'Acessórios',
+    rating: 4.6,
+    reviewCount: 89,
+    description: 'Espaçosa e resistente para aventuras urbanas.',
+    badge: 'Popular',
+  },
+  {
+    id: 3,
+    name: 'Camiseta Minimal Branca',
+    price: 79.90,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80',
+    category: 'Roupas',
+    rating: 4.4,
+    reviewCount: 512,
+    description: 'Algodão premium, corte perfeito.',
+  },
+  {
+    id: 4,
+    name: 'Relógio Sunset Classic',
+    price: 459.00,
+    originalPrice: 599.00,
+    image: 'https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&q=80',
+    category: 'Acessórios',
+    rating: 4.9,
+    reviewCount: 67,
+    description: 'Elegância atemporal para qualquer ocasião.',
+    badge: 'Novo',
+  },
+  {
+    id: 5,
+    name: 'Óculos Retro Frame',
+    price: 219.90,
+    image: 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&q=80',
+    category: 'Acessórios',
+    rating: 4.3,
+    reviewCount: 43,
+    description: 'Visual retrô com proteção UV400.',
+  },
+  {
+    id: 6,
+    name: 'Jaqueta Puffer Preta',
+    price: 349.90,
+    originalPrice: 449.90,
+    image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&q=80',
+    category: 'Roupas',
+    rating: 4.7,
+    reviewCount: 156,
+    description: 'Quente, leve e estilosa para o inverno.',
+    badge: 'Oferta',
+  },
+]
+
+// Lista de categorias únicas extraídas dos produtos
+export const categories = ['Todos', ...new Set(products.map(p => p.category))]
