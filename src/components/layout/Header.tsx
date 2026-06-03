@@ -19,8 +19,21 @@ export default function Header() {
 
           {/* Nav desktop */}
           <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-            {['Início', 'Produtos', 'Ofertas', 'Sobre'].map(item => (
-              <a key={item} href="#" className="hover:text-primary-600 transition-colors">{item}</a>
+            {[
+              { label: 'Início', id: 'inicio' },
+              { label: 'Produtos', id: 'produtos' },
+              { label: 'Ofertas', id: 'ofertas' },
+              { label: 'Sobre', id: 'sobre' },
+            ].map(item => (
+              <button
+                key={item.label}
+                onClick={() => {
+                  document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="hover:text-primary-600 transition-colors"
+              >
+                {item.label}
+              </button>
             ))}
           </nav>
 
@@ -56,8 +69,22 @@ export default function Header() {
         {/* Nav mobile */}
         {menuOpen && (
           <div className="md:hidden px-4 pb-4 flex flex-col gap-3 text-sm font-medium text-gray-700">
-            {['Início', 'Produtos', 'Ofertas', 'Sobre'].map(item => (
-              <a key={item} href="#" className="py-2 border-b border-gray-100">{item}</a>
+            {[
+              { label: 'Início', id: 'inicio' },
+              { label: 'Produtos', id: 'produtos' },
+              { label: 'Ofertas', id: 'ofertas' },
+              { label: 'Sobre', id: 'sobre' },
+            ].map(item => (
+              <button
+                key={item.label}
+                onClick={() => {
+                  document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })
+                  setMenuOpen(false)
+                }}
+                className="py-2 border-b border-gray-100 text-left"
+              >
+                {item.label}
+              </button>
             ))}
           </div>
         )}
