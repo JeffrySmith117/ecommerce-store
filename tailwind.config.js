@@ -8,13 +8,13 @@ export default {
     extend: {
       colors: {
         primary: {
-          50:  '#fdf4ff',
-          100: '#fae8ff',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7e22ce',
+          50:  '#f9f9f9',
+          100: '#f0f0f0',
+          500: '#404040',
+          600: '#1a1a1a',
+          700: '#000000',
         },
-        accent: '#f59e0b',
+        accent: '#ffffff',
       },
       fontFamily: {
         sans: ['Sora', 'sans-serif'],
